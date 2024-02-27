@@ -1,0 +1,32 @@
+body {
+  background-image: url(../images/Ecommerce-landing-page-examples.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 60px;
+  background-color: transparent;
+  position: fixed;
+  width: 100%;
+}
+.navul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0;
+  list-style: none;
+  gap: 80px;
+  background-color: black;
+  color: white;
+  padding: 15px;
+  border-radius: 30px;
+  width: 60%;
+}
+
+.navul li:hover {
+  cursor: pointer;
+  border-bottom: 1px solid white;
+}
