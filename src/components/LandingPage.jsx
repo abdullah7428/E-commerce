@@ -1,30 +1,36 @@
 import React, { useState, useEffect } from "react";
 import style from "../modules/Landing.module.css";
-
+import { useSelector, useDispatch } from "react-redux";
+import { openCart } from "../redux/slices/products";
 const LandingPage = () => {
+  const disatch = useDispatch();
+  const cartBool = useSelector((state) => state.Products.cartOpen);
+  const handleclick = () => {
+    disatch(openCart(!cartBool));
+  };
   const [height, setHeight] = useState(0);
 
   const handleScroll = () => {
-    console.log(height);
     setHeight(window.scrollY);
   };
   window.addEventListener("scroll", handleScroll);
   return (
-    <>
+    <div className={style.Background}>
       <nav className={style.nav}>
         <ul
           className={style.navul}
           style={{
-            background: height > 100 ? "black" : "transparent",
+            background: height > 100 ? "#d3c9c9" : "transparent",
+            color: height > 100 ? "purple" : "white",
           }}
         >
           <li>Home</li>
           <li>Products</li>
           <li>Contact</li>
-          <li>More</li>
+          <li onClick={handleclick}>Cart</li>
         </ul>
       </nav>
-    </>
+    </div>
   );
 };
 

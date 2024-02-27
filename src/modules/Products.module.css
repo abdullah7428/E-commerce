@@ -1,0 +1,88 @@
+.Main {
+  display: flex;
+  flex-direction: column;
+  color: purple;
+  align-items: center;
+  min-height: 100vh;
+}
+.Main > h3 {
+  height: 60px;
+  width: 100%;
+  text-align: center;
+  padding: 12px;
+  font-size: 30px;
+}
+.Main > h4 {
+  text-align: start;
+  width: 100%;
+  padding: 10px;
+  position: absolute;
+}
+.Main > h4 > span {
+  cursor: pointer;
+}
+.ProductContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+.Card {
+  width: 300px;
+  height: 300px;
+  position: relative;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.cardinner {
+  position: absolute;
+  transform-style: preserve-3d;
+  width: 100%;
+  height: 100%;
+  transition: all 0.5s ease;
+  border-radius: 10px;
+}
+.cardinner:hover {
+  transform: rotateY(180deg);
+}
+.cardfront {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border: 0.2px solid purple;
+  border-radius: 10px;
+  flex-direction: column;
+  padding: 10px;
+}
+.Back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  transform: rotateY(180deg);
+  border: 0.2px solid purple;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 50px;
+}
+.Back button {
+  padding: 10px;
+  border: none;
+  background-color: purple;
+  color: white;
+  border-radius: 6px;
+}
+.Back button:hover {
+  cursor: pointer;
+  box-shadow: -4px 4px 2px 1px rgb(237, 175, 237);
+}
