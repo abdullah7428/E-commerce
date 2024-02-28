@@ -42,7 +42,7 @@ const Products = () => {
     }
   }
   return (
-    <div className={style.Main}>
+    <div className={style.Main} id="products">
       <h4>
         <span onClick={() => setModal(!modal)}>Sort</span>
         <span>

@@ -3,7 +3,7 @@ import style from "../modules/footer.module.css";
 import { FaFacebook, FaInstagram, FaLinkedin, FaTwitter } from "react-icons/fa";
 const Footer = () => {
   return (
-    <div className={style.footer}>
+    <div className={style.footer} id="footer">
       <div className={style.map}>
         <iframe
           title="Google Map"
@@ -31,7 +31,12 @@ const Footer = () => {
             Phone No: <span>+923036875119</span>
           </h2>
           <h2>
-            <a style={{textDecoration:"none",color:"purple"}} href="mailto:hunny7428@gmail.com">Email Us: hunny7428@gmail.com</a>
+            <a
+              style={{ textDecoration: "none", color: "purple" }}
+              href="mailto:hunny7428@gmail.com"
+            >
+              Email Us: hunny7428@gmail.com
+            </a>
           </h2>
         </div>
         <div className={style.icons}>

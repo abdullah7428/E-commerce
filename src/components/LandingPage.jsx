@@ -15,7 +15,7 @@ const LandingPage = () => {
   };
   window.addEventListener("scroll", handleScroll);
   return (
-    <div className={style.Background}>
+    <div className={style.Background} id="home">
       <nav className={style.nav}>
         <ul
           className={style.navul}
@@ -24,10 +24,50 @@ const LandingPage = () => {
             color: height > 100 ? "purple" : "white",
           }}
         >
-          <li>Home</li>
-          <li>Products</li>
-          <li>Contact</li>
-          <li onClick={handleclick}>Cart</li>
+          <li>
+            <a
+              style={{
+                background: height > 100 ? "#d3c9c9" : "transparent",
+                color: height > 100 ? "purple" : "white",
+              }}
+              href="#home"
+            >
+              Home
+            </a>
+          </li>
+          <li>
+            <a
+              style={{
+                background: height > 100 ? "#d3c9c9" : "transparent",
+                color: height > 100 ? "purple" : "white",
+              }}
+              href="#products"
+            >
+              Products
+            </a>
+          </li>
+          <li>
+            <a
+              style={{
+                background: height > 100 ? "#d3c9c9" : "transparent",
+                color: height > 100 ? "purple" : "white",
+              }}
+              href="#footer"
+            >
+              Contact
+            </a>
+          </li>
+          <li onClick={handleclick}>
+            <a
+              style={{
+                background: height > 100 ? "#d3c9c9" : "transparent",
+                color: height > 100 ? "purple" : "white",
+              }}
+              href="#"
+            >
+              Cart
+            </a>
+          </li>
         </ul>
       </nav>
     </div>
