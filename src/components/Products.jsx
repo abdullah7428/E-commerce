@@ -17,10 +17,29 @@ const Products = () => {
     setPrData(products);
   }, [products]);
   function sortA() {
-    setPrData([...products].sort((a, b) => a.price - b.price));
+    setPrData([...prdata].sort((a, b) => a.price - b.price));
   }
   function sortD() {
-    setPrData([...products].sort((a, b) => b.price - a.price));
+    setPrData([...prdata].sort((a, b) => b.price - a.price));
+  }
+  function sortC(e) {
+    const category = e.target.value;
+    {
+      category == "all"
+        ? setPrData(products)
+        : setPrData([...products].filter((itm) => itm.category == category));
+    }
+    return prdata;
+  }
+  function sortP(e) {
+    const price = parseInt(e.target.value); // Parse the input value as an integer
+    const filteredData = prdata.filter((itm) => itm.price <= price);
+    if (filteredData.length === 0) {
+      console.log("No items available for the specified price.");
+      setPrData(prdata);
+    } else {
+      setPrData(filteredData);
+    }
   }
   return (
     <div className={style.Main}>
@@ -32,7 +51,7 @@ const Products = () => {
               background: "#d3c9c9",
               width: "250px",
               zIndex: "11111",
-              height: "200px",
+              height: "250px",
               position: "absolute",
               textAlign: "center",
               margin: "auto",
@@ -40,14 +59,30 @@ const Products = () => {
               alignItems: "center",
               justifyContent: "center",
               transition: "1s ease all",
-              flexDirection:"column",
-              gap:"20px",
-              listStyle:"none"
+              flexDirection: "column",
+              gap: "20px",
+              listStyle: "none",
             }}
           >
             <li onClick={sortA}> Price Low To High</li>
             <li onClick={sortD}> Price High To Low</li>
             <li onClick={() => setPrData(products)}>clear</li>
+            <li>
+              Sort By Category{" "}
+              <select onChange={sortC} name="" id="">
+                <option value="all" selected>
+                  all
+                </option>
+                <option value="men's clothing">men's clothing</option>
+                <option value="jewelery">jewelery</option>
+                <option value="electronics">electronics</option>
+                <option value="women's clothing">women's clothing"</option>
+              </select>
+            </li>
+            <li>
+              sort by price{" "}
+              <input onChange={sortP} type="number" name="" id="" />
+            </li>
           </ul>
         </span>
       </h4>

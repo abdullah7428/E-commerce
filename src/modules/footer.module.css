@@ -1,0 +1,47 @@
+.footer {
+  height: 200px;
+  background-color: rgb(211, 201, 201);
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  padding: 10px;
+  color: purple;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+}
+.contacts h2 {
+  font-size: 14px;
+}
+.contacts h2:hover {
+  border-bottom: 1px solid white;
+  cursor: pointer;
+}
+.map {
+  height: 100%;
+  width: 35%;
+}
+.contacts {
+  height: 100%;
+  width: 65%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+}
+.icons {
+  height: 100%;
+  width: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  font-size: 30px;
+  transform: 1s all ease;
+}
+
+.icons p>:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}

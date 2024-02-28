@@ -4,6 +4,7 @@
   color: purple;
   align-items: center;
   min-height: 100vh;
+  margin-bottom: 15px;
 }
 .Main > h3 {
   height: 60px;
