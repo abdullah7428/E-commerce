@@ -17,7 +17,7 @@ const Cart = () => {
   return (
     <div
       id="cart"
-      className={style.cart}
+      className={style.cart)
       style={{ right: cartBool ? "0px" : "-400px" }}
     >
       <div style={{ display: "flex", justifyContent: "end" }}>
